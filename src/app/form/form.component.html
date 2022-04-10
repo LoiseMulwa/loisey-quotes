@@ -1,13 +1,29 @@
-<div class="container">
+<div class="container pt-5" id="form">
     <div class="row">
-        <form action="">
-            <h3 class="fr text-green">ADD YOUR QUOTE IN THIS FORM</h3>
+        <div class="col-md-6">
+        <form action="" >
+            <p class="fr mt-3">ADD QUOTE IN THIS FORM</p>
             <div>
                 <label for="author">Author:</label><br>
-                <input type="text" name="author" id="author">
-             </div>
+                <input type="text" name="author" id="author" placeholder="Enter the author" required>
+             </div><br>
+             <div>
+                 <label for="text">Enter quote here:</label><br>
+                 <textarea name="quote" id="quote" cols="55" rows="3" placeholder="Enter quote here..."></textarea>
+             </div><br>
+             <div>
+                 <label for="creator">Created By:</label><br>
+                 <input type="text" name="creator" id="creator" placeholder="Enter name here" required>
+             </div><br>
+
+            <button class="BTN">SUBMIT</button>
         </form>
     </div>
+    <div class="col-md-6">
+        <app-quotes></app-quotes>
+    </div>
+</div>
+
 </div>
 
 
