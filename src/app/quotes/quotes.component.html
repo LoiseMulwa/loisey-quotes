@@ -1,13 +1,19 @@
-<div class="container pt-5">
-    <h4 class="add text-white">Added Quotes</h4>
-    <div class="row">
-        <div class="card">
-            <div class="card-body">
-                <p>Hard work pays</p>
-            </div>
-        </div>
-        <div class="card mt-3">
-            <p>Nothing comes in an easy way!</p>
-        </div>
-    </div>
+<!-- <app-quote-form (add)="quoteAdded($event)"></app-quote-form> -->
+
+
+<div class="quotes" *ngFor="let quotes of myQuotes; let i = index">
+    <p>{{quotes.name}}</p>
+    <p>{{quotes.quote}}</p>
+    <p>{{quotes.author}}</p>
+    <p>{{quotes.datePosted|date:'short'}}</p>
+    <!-- <app-quote-details  (isRead)='quotesdelete($event,i)'></app-quote-details> -->
 </div>
+
+
+<!-- <ul *ngFor ="let Quotes of quote ">
+    <li>{{ Quotes.quote}} <span class="iconify ml-4 bg-info" data-icon="bi:arrow-up-square">{{ Quotes.upvotes}}</span> UPVOTES <span class="iconify bg-danger" data-icon="bi:arrow-down-square">{{ Quotes.downvotes}}</span>DOWNVOTES</li>
+
+</ul> -->
+
+
+
